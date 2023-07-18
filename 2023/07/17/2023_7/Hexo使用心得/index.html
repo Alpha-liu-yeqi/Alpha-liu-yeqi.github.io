@@ -3,7 +3,7 @@
 <html lang="zh-CN">
     <head>
         <meta charset="utf-8" />
-        <title>个人blog | follow_light</title>
+        <title>Hexo使用心得/避坑指南 | follow_light</title>
         <meta name="author" content="Meteor`Vi" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -146,21 +146,25 @@
                 <div id="main" v-show="!loading">
                     <div class="article">
     <div>
-        <h1>个人blog</h1>
+        <h1>Hexo使用心得/避坑指南</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2023/7/15
+            2023/7/17
         </span>
         
         
     </div>
     
     <div class="content" v-pre>
-        <p>无聊随便整了个blog玩玩 Hexo从下载到部署不到半个小时 还挺方便(笑<br>微信被家长看管得太死了 聊天记录和朋友圈基本睡觉前都得删干净 以后有什么私密的东西就发blog里了<br>现在blog就一个空壳子 有时间再填充</p>
+        <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>Git和node.js官网安装速度是真慢…最好提前找一个镜像站<br>Git的npm安装速度倒还是可以的，唯一要吐槽的就是GBH改了一大堆快捷键…复制命令的时候超级难受，另外不知道为什么cd命令没用，一开始看见那一大堆报错信息真的心肺骤停</p>
+<span id="more"></span>
+
+<h2 id="编辑"><a href="#编辑" class="headerlink" title="编辑"></a>编辑</h2><p>拿markdown写blog确实很方便也很适合初学者，但是不能实时上传，需要手动输入命令，拿hexo server命令本地测试网页倒是很友好  </p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>从这一步开始可真是折磨了，首先我选择的是Gitee，想着既然是国内的代码托管平台速度肯定快 ，结果发现Gitee pages要实名认证<br>…再见<br>最后还是选择了Github pages，即上传即用，不用弄一大堆乱七八糟的东西。站点资源1GB，每月流量10GB的配额在博客初期使用绰绰有余。<br>用Github创建一个储存库，运行Git全局设置，添加密钥，配置，再在.config文件最后添加SSH，最后hexo d上传一气呵成，但是注意，每次上传时一定要挂着加速器否则会提示上传失败<br>上传之后储存库里应该就有代码文件了，用Github pages部署就能直接用后缀为.github.io的网址访问了<br>至此，总算是折腾完了</p>
 
     </div>
     
